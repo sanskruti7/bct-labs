@@ -19,7 +19,7 @@ contract CreditCardLimit {
         stayCost = cost;
     }
 
-    function get_remaining_balance() public {
+    function get_remaining_balance() public view returns(uint){
         return card_limit - (travelCost + foodCost + stayCost);
     }
 }
